@@ -54,13 +54,6 @@
             <artifactId>spock-reports</artifactId>
             <version>1.2.7</version>
             <scope>test</scope>
-            <!-- Ignores Groovy/Spock versions specified by this dependency. -->
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
     <build>

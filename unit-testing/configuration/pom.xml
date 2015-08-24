@@ -27,6 +27,13 @@
     </repositories>
 
     <dependencies>
+        <!-- Overrides the JUnit version specified by spock-core -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
         <!-- spock-core -->
         <dependency>
             <groupId>org.spockframework</groupId>

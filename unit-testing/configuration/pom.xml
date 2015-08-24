@@ -107,7 +107,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
-                    <useFile>false</useFile>
                     <!-- Includes both Java and Groovy tests -->
                     <includes>
                         <include>**/*Test.java</include>

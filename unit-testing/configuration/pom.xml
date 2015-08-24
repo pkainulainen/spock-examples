@@ -48,13 +48,13 @@
             <version>2.4.4</version>
             <scope>test</scope>
         </dependency>
-        <!-- Creates a test report -->
+        <!-- Creates the test report -->
         <dependency>
             <groupId>com.athaydes</groupId>
             <artifactId>spock-reports</artifactId>
             <version>1.2.7</version>
             <scope>test</scope>
-            <!-- this avoids affecting your version of Groovy/Spock -->
+            <!-- Ignores Groovy/Spock versions specified by this dependency. -->
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>

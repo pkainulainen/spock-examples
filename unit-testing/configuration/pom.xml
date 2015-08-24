@@ -66,8 +66,8 @@
     <build>
         <finalName>spock-example</finalName>
         <plugins>
+            <!-- compiles Groovy code. -->
             <plugin>
-                <!-- This plugin compiles Groovy code. -->
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
                 <version>1.5</version>

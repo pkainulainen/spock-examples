@@ -64,21 +64,12 @@
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
                 <version>1.5</version>
-                <!-- Configures the location of the compiled test classes -->
-                <configuration>
-                    <testSources>
-                        <testSource>
-                            <directory>${project.basedir}/src/test</directory>
-                            <includes>
-                                <include>**/*.groovy</include>
-                            </includes>
-                        </testSource>
-                    </testSources>
-                </configuration>
-                <!-- Invokes the testCompile goal that compiles our Spock tests -->
                 <executions>
                     <execution>
                         <goals>
+                            <!-- Invokes the addTestSources goal that adds Groovy tests source to the project's test sources -->
+                            <goal>addTestSources</goal>
+                            <!-- Invokes the testCompile goal that compiles our Spock tests -->
                             <goal>testCompile</goal>
                         </goals>
                     </execution>

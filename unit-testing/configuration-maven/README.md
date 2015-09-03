@@ -1,6 +1,6 @@
 This is an example application of my blog post:
 
-* [Writing Unit Tests With Spock: Creating a Maven Project]() - Not published yet
+* [Writing Unit Tests With Spock: Creating a Maven Project](http://www.petrikainulainen.net/programming/testing/writing-unit-tests-with-spock-framework-creating-a-maven-project/)
 
 Prerequisites
 =============

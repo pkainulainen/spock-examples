@@ -1,5 +1,6 @@
 *.iml
 overlays
+build
 target
 .idea
 .DS_Store

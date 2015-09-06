@@ -7,11 +7,14 @@ import spock.lang.Specification
  */
 class HelloSpec extends Specification {
 
-    def sayHello() {
-        given: "A new Hello object is created"
-        def hello = new Hello();
+    def hello = new Hello();
 
-        expect: "Should say hello to person whose name is given as a method parameter"
-        hello.sayHello("Petri") == "Hello Petri";
+    def sayHello() {
+        given: "A person's name is given as a method parameter."
+        def greeting = hello.sayHello("Petri");
+
+        expect: "Should say hello to the person whose name is given as a method parameter"
+        greeting == "Hello Petri";
     }
 }
+

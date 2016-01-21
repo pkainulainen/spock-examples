@@ -17,7 +17,7 @@ class MapSpec extends Specification {
         when: 'Element is put to the map'
         map.put(key, value)
 
-        then: 'Element should be found by using the correct key'
+        then: 'Element should be found from the map'
         map.get(key) == 1
     }
 
@@ -30,7 +30,7 @@ class MapSpec extends Specification {
         when: 'Element is put to the map'
         map.put(key, value)
 
-        then: 'Element should by found by using the correct key'
+        then: 'Element should by found from the map'
         map.get(key) == 1
     }
 
@@ -44,7 +44,7 @@ class MapSpec extends Specification {
         when: 'One element is put to the map'
         map.put(key, value)
 
-        then: 'Element should be found by using the correct key'
+        then: 'Element should be found from the map'
         map.get(key) == 1
     }
 
@@ -57,13 +57,13 @@ class MapSpec extends Specification {
         when: 'One element is put to the map'
         map.put(key, value)
 
-        then: 'Element should be found by using the correct key'
+        then: 'Element should be found from the map'
         map.get(key) == 1
 
         when: 'Map is empty'
         map.clear()
 
-        then: 'Element should not be found by using the correct key'
+        then: 'Element should not be found from the map'
         map.get(key) == null
     }
 }

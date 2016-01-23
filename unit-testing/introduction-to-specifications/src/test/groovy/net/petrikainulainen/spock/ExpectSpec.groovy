@@ -6,14 +6,21 @@ import spock.lang.Specification
  * @author Petri Kainulainen
  */
 class ExpectSpec extends Specification {
+    
+    def 'Get value from a map'() {
 
-    def 'Return maximum value'() {
+        given: 'Map contains one key-value pair'
+        def incorrectKey = 'incorrectKey'
+        def key = 'key'
+        def value = 1
 
-        expect: 'Should return max value when the max value is the second method parameter'
-        Math.max(2, 3) == 3
+        def map = new HashMap()
+        map.put(key, value)
 
-        and: 'Should return max value when the max value is the first method parameter'
+        expect: 'Should return the found value when a value is found with the given key'
+        map.get(key) == value
 
-        Math.max(3, 2) == 3
+        and: 'Should return null when a value is not found with the given key'
+        map.get(incorrectKey) == null
     }
 }

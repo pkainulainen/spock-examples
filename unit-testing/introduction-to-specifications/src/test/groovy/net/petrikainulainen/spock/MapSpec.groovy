@@ -7,63 +7,73 @@ import spock.lang.Specification
  */
 class MapSpec extends Specification {
 
-    def 'Get element from a map (with setup block)'() {
+    def 'Get value from a map (with setup block)'() {
 
         setup:
-        def map = new HashMap()
-        def key = 'element'
+        def key = 'key'
         def value = 1
 
-        when: 'Element is put to the map'
+        def map = new HashMap()
         map.put(key, value)
 
-        then: 'Element should be found from the map'
-        map.get(key) == 1
+        when: 'Mapping is found for the given key'
+        def found = map.get(key)
+
+        then: 'Should return the mapped value'
+        found == value
     }
 
-    def 'Get element from a map (with implicit setup block)'() {
+    def 'Get value from a map (with implicit setup block)'() {
 
-        def map = new HashMap()
-        def key = 'element'
+        def key = 'key'
         def value = 1
 
-        when: 'Element is put to the map'
+        def map = new HashMap()
         map.put(key, value)
 
-        then: 'Element should by found from the map'
-        map.get(key) == 1
+        when: 'Mapping is found for the given key'
+        def found = map.get(key)
+
+        then: 'Should return the mapped value'
+        found == value
     }
 
-    def 'Get element from a map (with given block)'() {
+    def 'Get value from a map (with given block)'() {
 
-        given: 'Map is empty'
-        def map = new HashMap()
-        def key = 'element'
+        given: 'Map contains one key-value pair'
+        def key = 'key'
         def value = 1
 
-        when: 'One element is put to the map'
+        def map = new HashMap()
         map.put(key, value)
 
-        then: 'Element should be found from the map'
-        map.get(key) == 1
+        when: 'A value is found with the given key'
+        def found = map.get(key)
+
+        then: 'Should return the found value'
+        found == value
     }
 
-    def 'Get element from a map (with multiple when-then blocks)'() {
+    def 'Get value from a map (with multiple when-then blocks)'() {
 
-        def map = new HashMap()
-        def key = 'element'
+        given: 'Map contains one key-value pair'
+        def incorrectKey = 'incorrectKey'
+        def key = 'key'
         def value = 1
 
-        when: 'One element is put to the map'
+        def map = new HashMap()
         map.put(key, value)
 
-        then: 'Element should be found from the map'
-        map.get(key) == 1
+        when: 'A value is found with the given key'
+        def found = map.get(key)
 
-        when: 'Map is empty'
-        map.clear()
+        then: 'Should return the found value'
+        found == value
 
-        then: 'Element should not be found from the map'
-        map.get(key) == null
+        when: 'A value is not found with the given key'
+        found = map.get(incorrectKey)
+
+        then: 'Should return null'
+        found == null
     }
 }

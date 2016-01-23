@@ -1,7 +1,7 @@
 This is an example application of the following blog post:
 
-* [Writing Unit Tests With Spock: Introduction to Specifications, Part One]() - Not published yet
-* [Writing Unit Tests With Spock: Introduction to Specifications, Part Two]() - Not published yet
+* [Writing Unit Tests With Spock: Introduction to Specifications, Part One](http://www.petrikainulainen.net/programming/testing/writing-unit-tests-with-spock-framework-introduction-to-specifications-part-one/) 
+* [Writing Unit Tests With Spock: Introduction to Specifications, Part Two](http://www.petrikainulainen.net/programming/testing/writing-unit-tests-with-spock-framework-introduction-to-specifications-part-two/)
 
 If you are not familiar with Gradle, you might want to read the following blog posts:
 
